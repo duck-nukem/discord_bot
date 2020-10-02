@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  bot:
+    build: .
+    environment:
+      - DISCORD_BOT_TOKEN=NzUxNTAzMjE1OTQxNTE3NDYz.X1KB6A.L6HSOqDVYzExwaSzSC_wN-02Ppo
+      - YOUTUBE_TOKEN=AIzaSyBOzde6ARBCmZpm8TGzx2-2dEfvKBRus_k
+    volumes:
+      - .:/opt/bot
+    entrypoint: python3 -u /opt/bot/main.py
